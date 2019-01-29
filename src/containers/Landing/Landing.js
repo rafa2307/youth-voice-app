@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import SearchField from 'react-search-field';
 import './Landing.css';
 
 import Home from '../Home/Home';
@@ -85,7 +86,9 @@ export default class Landing extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem className="social-item" />
-                <NavItem className="search-item" />
+                <NavItem className="search-item">
+                  <SearchField placeholder="Search item" />
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
