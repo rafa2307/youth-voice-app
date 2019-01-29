@@ -1,0 +1,19 @@
+.logo {
+  width: 80px;
+  margin-left: -15px;
+}
+
+.youth-voice-img {
+  width: 210px;
+}
+a.nav-link {
+  font-weight: 600;
+  color: black !important;
+}
+a.nav-link:hover {
+  font-weight: 600;
+  color: #245e7d !important;
+}
+.item {
+  border-right: #cfb364 1px solid;
+}

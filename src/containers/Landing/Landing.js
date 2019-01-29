@@ -38,40 +38,54 @@ export default class Landing extends Component {
       <Router>
         <div className="Landing">
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">Image</NavbarBrand>
+            <NavbarBrand href="/">
+              <img
+                className="logo"
+                alt="Youth Voice Logo"
+                src={require('../../assets/img/Logo.png')}
+              />
+
+              <img
+                className="youth-voice-img"
+                alt="Youth Voice"
+                src={require('../../assets/img/YouthVoices.png')}
+              />
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/">
                     Home
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/programs">
                     Programs
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/participate">
                     Participate
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/stories">
                     Stories
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/contactUs">
                     Contact Us
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem className="item">
                   <NavLink tag={Link} to="/aboutUs">
                     About Us
                   </NavLink>
                 </NavItem>
+                <NavItem className="social-item" />
+                <NavItem className="search-item" />
               </Nav>
             </Collapse>
           </Navbar>
