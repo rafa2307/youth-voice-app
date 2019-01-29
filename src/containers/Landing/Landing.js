@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink as RRNavLink
+} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -56,32 +60,52 @@ export default class Landing extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/">
+                  <NavLink tag={RRNavLink} to="/home" activeClassName="active">
                     Home
                   </NavLink>
                 </NavItem>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/programs">
+                  <NavLink
+                    tag={RRNavLink}
+                    to="programs"
+                    activeClassName="active"
+                  >
                     Programs
                   </NavLink>
                 </NavItem>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/participate">
+                  <NavLink
+                    tag={RRNavLink}
+                    to="participate"
+                    activeClassName="active"
+                  >
                     Participate
                   </NavLink>
                 </NavItem>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/stories">
+                  <NavLink
+                    tag={RRNavLink}
+                    to="stories"
+                    activeClassName="active"
+                  >
                     Stories
                   </NavLink>
                 </NavItem>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/contactUs">
+                  <NavLink
+                    tag={RRNavLink}
+                    to="contactUs"
+                    activeClassName="active"
+                  >
                     Contact Us
                   </NavLink>
                 </NavItem>
                 <NavItem className="item">
-                  <NavLink tag={Link} to="/aboutUs">
+                  <NavLink
+                    tag={RRNavLink}
+                    to="aboutUs"
+                    activeClassName="active"
+                  >
                     About Us
                   </NavLink>
                 </NavItem>
@@ -93,6 +117,7 @@ export default class Landing extends Component {
             </Collapse>
           </Navbar>
           <Route path="/" exact component={Home} />
+          <Route path="/home" exact component={Home} />
           <Route path="/programs" exact component={Programs} />
           <Route path="/participate" exact component={Participate} />
           <Route path="/stories" exact component={Stories} />
