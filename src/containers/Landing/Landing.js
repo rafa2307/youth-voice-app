@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -9,6 +10,13 @@ import {
   NavLink
 } from 'reactstrap';
 import './Landing.css';
+
+import Home from '../Home/Home';
+import Programs from '../Programs/Programs';
+import Participate from '../Participate/Participate';
+import Stories from '../Stories/Stories';
+import ContactUs from '../ContactUs/ContactUs';
+import AboutUs from '../AboutUs/AboutUs';
 
 export default class Landing extends Component {
   constructor(props) {
@@ -24,36 +32,57 @@ export default class Landing extends Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
-      <div className="Landing">
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Image</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Programs</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Participate</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Stories</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Contact Us</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">About Us</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <Router>
+        <div className="Landing">
+          <Navbar color="light" light expand="md">
+            <NavbarBrand href="/">Image</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink tag={Link} to="/">
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/programs">
+                    Programs
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/participate">
+                    Participate
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/stories">
+                    Stories
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/contactUs">
+                    Contact Us
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/aboutUs">
+                    About Us
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+          <Route path="/" exact component={Home} />
+          <Route path="/programs" exact component={Programs} />
+          <Route path="/participate" exact component={Participate} />
+          <Route path="/stories" exact component={Stories} />
+          <Route path="/contactUs" exact component={ContactUs} />
+          <Route path="/aboutUs" exact component={AboutUs} />
+        </div>
+      </Router>
     );
   }
 }
