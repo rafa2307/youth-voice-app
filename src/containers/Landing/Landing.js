@@ -6,13 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
-import './Landing.module.css';
+import './Landing.css';
 
 export default class Landing extends Component {
   constructor(props) {
@@ -30,31 +26,30 @@ export default class Landing extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="Landing">
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Image</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="#">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  GitHub
-                </NavLink>
+                <NavLink href="#">Programs</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="#">Participate</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Stories</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">Contact Us</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#">About Us</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
