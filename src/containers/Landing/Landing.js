@@ -43,7 +43,7 @@ export default class Landing extends Component {
     return (
       <Router>
         <div className="Landing">
-          <Navbar color="light" light expand="xl">
+          <Navbar light expand="xl">
             <NavbarBrand href="/">
               <img
                 className="logo"
@@ -121,6 +121,7 @@ export default class Landing extends Component {
               </Nav>
             </Collapse>
           </Navbar>
+          <hr className="special" />
           <Route path="/" exact component={Home} />
           <Route path="/home" exact component={Home} />
           <Route path="/programs" exact component={Programs} />
