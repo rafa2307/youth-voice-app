@@ -1,31 +1,32 @@
-.logo {
+.Logo {
   width: 80px;
   margin-left: -15px;
 }
 
-.youth-voice-img {
+.YouthVoiceImg {
   width: 204px;
 }
-.nav-link {
+
+.NavLink {
   font-weight: 600;
   -webkit-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-.nav-link:hover {
+.NavLink:hover {
   color: #245e7d !important;
 }
 
-.item {
+.Item {
   border-right: #cfb364 1px solid;
 }
-.social-item {
+.SocialItem {
   position: absolute;
   right: 222px;
   bottom: 13px;
   cursor: pointer;
 }
-.social-item svg {
+.SocialItem svg {
   margin: 9px;
   font-size: 24pt;
   color: rgb(146, 146, 146);
@@ -33,29 +34,29 @@
   -o-transition: color 0.1s linear;
   transition: color 0.1s linear;
 }
-.facebook:hover {
+.Facebook:hover {
   color: #3b5998;
 }
-.twitter:hover {
+.Twitter:hover {
   color: #1da1f2;
 }
-.youtube:hover {
+.Youtube:hover {
   color: #ff0000;
 }
-.search-item {
+.SearchItem {
   position: absolute;
   right: 10px;
 }
-.special {
+.Special {
   margin: 0;
 }
 @media only screen and (max-width: 1199px) {
-  .social-item {
+  .SocialItem {
     position: relative;
     left: -11px;
     top: -4px;
   }
-  .search-item {
+  .SearchItem {
     position: initial;
   }
 }

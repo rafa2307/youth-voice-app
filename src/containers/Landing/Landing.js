@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import SearchField from 'react-search-field';
 import { FaYoutube, FaTwitter, FaFacebook } from 'react-icons/fa';
-import './Landing.css';
+import classes from './Landing.module.css';
 
 import Home from '../Home/Home';
 import Programs from '../Programs/Programs';
@@ -46,13 +46,13 @@ export default class Landing extends Component {
           <Navbar light expand="xl">
             <NavbarBrand href="/">
               <img
-                className="logo"
+                className={classes.Logo}
                 alt="Youth Voice Logo"
                 src={require('../../assets/img/Logo.png')}
               />
 
               <img
-                className="youth-voice-img"
+                className={classes.YouthVoiceImg}
                 alt="Youth Voice"
                 src={require('../../assets/img/YouthVoices.png')}
               />
@@ -60,13 +60,19 @@ export default class Landing extends Component {
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar>
-                <NavItem className="item">
-                  <NavLink tag={RRNavLink} to="/home" activeClassName="active">
+                <NavItem className={classes.Item}>
+                  <NavLink
+                    className={classes.NavLink}
+                    tag={RRNavLink}
+                    to="/home"
+                    activeClassName="active"
+                  >
                     Home
                   </NavLink>
                 </NavItem>
-                <NavItem className="item">
+                <NavItem className={classes.Item}>
                   <NavLink
+                    className={classes.NavLink}
                     tag={RRNavLink}
                     to="programs"
                     activeClassName="active"
@@ -74,8 +80,9 @@ export default class Landing extends Component {
                     Programs
                   </NavLink>
                 </NavItem>
-                <NavItem className="item">
+                <NavItem className={classes.Item}>
                   <NavLink
+                    className={classes.NavLink}
                     tag={RRNavLink}
                     to="participate"
                     activeClassName="active"
@@ -83,8 +90,9 @@ export default class Landing extends Component {
                     Participate
                   </NavLink>
                 </NavItem>
-                <NavItem className="item">
+                <NavItem className={classes.Item}>
                   <NavLink
+                    className={classes.NavLink}
                     tag={RRNavLink}
                     to="stories"
                     activeClassName="active"
@@ -92,8 +100,9 @@ export default class Landing extends Component {
                     Stories
                   </NavLink>
                 </NavItem>
-                <NavItem className="item">
+                <NavItem className={classes.Item}>
                   <NavLink
+                    className={classes.NavLink}
                     tag={RRNavLink}
                     to="contactUs"
                     activeClassName="active"
@@ -101,8 +110,9 @@ export default class Landing extends Component {
                     Contact Us
                   </NavLink>
                 </NavItem>
-                <NavItem className="item">
+                <NavItem className={classes.Item}>
                   <NavLink
+                    className={classes.NavLink}
                     tag={RRNavLink}
                     to="aboutUs"
                     activeClassName="active"
@@ -110,18 +120,18 @@ export default class Landing extends Component {
                     About Us
                   </NavLink>
                 </NavItem>
-                <NavItem className="social-item">
-                  <FaFacebook className="facebook" />
-                  <FaTwitter className="twitter" />
-                  <FaYoutube className="youtube" />
+                <NavItem className={classes.SocialItem}>
+                  <FaFacebook className={classes.Facebook} />
+                  <FaTwitter className={classes.Twitter} />
+                  <FaYoutube className={classes.Youtube} />
                 </NavItem>
-                <NavItem className="search-item">
+                <NavItem className={classes.SearchItem}>
                   <SearchField placeholder="Search item" />
                 </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
-          <hr className="special" />
+          <hr className={classes.Special} />
           <Route path="/" exact component={Home} />
           <Route path="/home" exact component={Home} />
           <Route path="/programs" exact component={Programs} />
