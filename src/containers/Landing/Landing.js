@@ -14,6 +14,7 @@ import {
   NavLink
 } from 'reactstrap';
 import SearchField from 'react-search-field';
+import { FaYoutube, FaTwitter, FaFacebook } from 'react-icons/fa';
 import './Landing.css';
 
 import Home from '../Home/Home';
@@ -109,7 +110,11 @@ export default class Landing extends Component {
                     About Us
                   </NavLink>
                 </NavItem>
-                <NavItem className="social-item" />
+                <NavItem className="social-item">
+                  <FaFacebook />
+                  <FaTwitter />
+                  <FaYoutube />
+                </NavItem>
                 <NavItem className="search-item">
                   <SearchField placeholder="Search item" />
                 </NavItem>
