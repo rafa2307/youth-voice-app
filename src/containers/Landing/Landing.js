@@ -43,7 +43,7 @@ export default class Landing extends Component {
     return (
       <Router>
         <div className="Landing">
-          <Navbar color="light" light expand="md">
+          <Navbar color="light" light expand="xl">
             <NavbarBrand href="/">
               <img
                 className="logo"
@@ -111,9 +111,9 @@ export default class Landing extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem className="social-item">
-                  <FaFacebook />
-                  <FaTwitter />
-                  <FaYoutube />
+                  <FaFacebook className="facebook" />
+                  <FaTwitter className="twitter" />
+                  <FaYoutube className="youtube" />
                 </NavItem>
                 <NavItem className="search-item">
                   <SearchField placeholder="Search item" />

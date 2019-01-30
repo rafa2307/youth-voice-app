@@ -4,12 +4,54 @@
 }
 
 .youth-voice-img {
-  width: 210px;
+  width: 204px;
 }
 .nav-link {
   font-weight: 600;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.nav-link:hover {
+  color: #245e7d !important;
 }
 
 .item {
   border-right: #cfb364 1px solid;
+}
+.social-item {
+  position: absolute;
+  right: 222px;
+  bottom: 13px;
+}
+.social-item svg {
+  margin: 9px;
+  font-size: 24pt;
+  color: rgb(146, 146, 146);
+  -webkit-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.facebook:hover {
+  color: #3b5998;
+}
+.twitter:hover {
+  color: #1da1f2;
+}
+.youtube:hover {
+  color: #ff0000;
+}
+.search-item {
+  position: absolute;
+  right: 10px;
+}
+@media only screen and (max-width: 1199px) {
+  .social-item {
+    position: relative;
+    left: -11px;
+    top: -4px;
+  }
+  .search-item {
+    position: initial;
+  }
 }
