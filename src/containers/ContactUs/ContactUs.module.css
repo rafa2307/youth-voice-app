@@ -1,0 +1,31 @@
+h2,
+h3 {
+  color: #245e7d !important;
+}
+.ContactUs div {
+  margin-top: 20px;
+  max-width: 1400px !important;
+}
+.FormButton {
+  color: #245e7d !important;
+  background-color: white !important;
+  font-weight: 700 !important;
+  width: 100%;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  border: #cfb364 1px solid !important;
+}
+.FormButton:hover {
+  background-color: #cfb364 !important;
+}
+.FormCard {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.CardTitle {
+  font-size: 17pt;
+  margin: 0 6px 3px 0;
+  color: #245e7d;
+}
