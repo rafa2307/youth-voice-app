@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import AppForm from '../AppForm/AppForm';
 
 import classes from './ContactUs.module.css';
 
@@ -33,25 +25,7 @@ export default class ContactUs extends Component {
           <Row>
             <Col md="6">
               <h3>Email Us</h3>
-              <Form>
-                <FormGroup>
-                  <Label for="name">Your Name (required)</Label>
-                  <Input type="text" name="name" id="name" />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="email">Email Address (required)</Label>
-                  <Input type="email" name="email" id="email" />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="subject">Subject (required)</Label>
-                  <Input type="text" name="subject" id="subject" />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="message">Message (required)</Label>
-                  <Input type="textarea" name="message" id="message" />
-                </FormGroup>
-                <Button className={classes.FormButton}>Submit</Button>
-              </Form>
+              <AppForm />
             </Col>
             <Col md="6">
               <div className={classes.FormCard}>

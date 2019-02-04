@@ -1,0 +1,13 @@
+.FormButton {
+  color: #245e7d !important;
+  background-color: white !important;
+  font-weight: 700 !important;
+  width: 100%;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  border: #cfb364 1px solid !important;
+}
+.FormButton:hover {
+  background-color: #cfb364 !important;
+}
