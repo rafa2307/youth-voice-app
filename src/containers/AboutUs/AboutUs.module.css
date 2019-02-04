@@ -14,3 +14,24 @@
 .Member p {
   text-align: center;
 }
+.Pages {
+  margin: 0 0 0 537px;
+}
+.PageNumberActive {
+  list-style: none;
+  display: inline;
+  color: #41c7db;
+  cursor: context-menu;
+  font-size: 250%;
+  padding-right: 2%;
+}
+
+.PageNumberNotActive {
+  list-style: none;
+  display: inline;
+  color: grey;
+  user-select: none;
+  cursor: pointer;
+  font-size: 250%;
+  padding-right: 2%;
+}
