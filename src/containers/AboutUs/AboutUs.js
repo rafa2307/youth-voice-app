@@ -67,7 +67,7 @@ export default class AboutUs extends Component {
   render() {
     const elements = this.state.emp.map((ele, i) => (
       <Col key={i} md="3">
-        <div className={classes.Member} key={i}>
+        <div className={classes.Member}>
           <img alt={ele.img} src={require('../../assets/img/images.png')} />
           <p>{ele.info}</p>
         </div>
