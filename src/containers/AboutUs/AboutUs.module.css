@@ -1,0 +1,16 @@
+.AboutUs {
+}
+.Header {
+  color: #245e7d;
+  padding-left: 2%;
+  padding-top: 2%;
+  margin-bottom: 40px;
+}
+
+.Member img {
+  width: 90px;
+  margin: 0 0 40px 82px;
+}
+.Member p {
+  text-align: center;
+}
