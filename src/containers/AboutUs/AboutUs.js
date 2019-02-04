@@ -76,6 +76,7 @@ export default class AboutUs extends Component {
       currentPage: Number(event.target.id)
     });
   }
+
   render() {
     const { members, currentPage, membersPerPage } = this.state;
     const indexOfLastMember = currentPage * membersPerPage;
