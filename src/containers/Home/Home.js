@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Program from '../../components/Program/Program';
+import Program from '../../components/HomeProgram/HomeProgram';
 import AppCarousel from '../AppCarousel/AppCarousel';
 import classes from './Home.module.css';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavLink as RRNavLink } from 'react-router-dom';
 import { Col, NavLink } from 'reactstrap';
-import classes from './Program.module.css';
+import classes from './HomeProgram.module.css';
 
 const program = props => (
   <Col md="6" className={classes.Program}>
