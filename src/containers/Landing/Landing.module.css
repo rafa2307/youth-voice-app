@@ -50,6 +50,35 @@
 .Special {
   margin: 0;
 }
+
+.Footer {
+  border-top: #1c4b64 solid 10px;
+  background-color: #245e7d;
+  height: 50px;
+}
+.Footer ul {
+  padding-top: 10px;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+.Footer ul li:first-child {
+  margin-left: 31%;
+}
+.Footer ul li a {
+  font-weight: 400 !important;
+  display: inline;
+  padding: 0;
+  margin: 0 15px;
+  color: white;
+  transition: all linear 0.1s;
+}
+.Footer ul li a:hover {
+  color: #1da1f2 !important;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1199px) {
   .SocialItem {
     position: relative;
@@ -58,5 +87,26 @@
   }
   .SearchItem {
     position: initial;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Footer ul li:first-child {
+    margin-left: 15%;
+  }
+}
+@media only screen and (max-width: 669px) {
+  .Footer ul li:first-child {
+    margin-left: 0;
+  }
+  .Footer ul li a {
+    margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .Footer ul li a {
+    margin: 0 4px;
+  }
+  .Footer ul li:first-child {
+    margin-left: -6%;
   }
 }

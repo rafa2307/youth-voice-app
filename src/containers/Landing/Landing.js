@@ -139,6 +139,33 @@ export default class Landing extends Component {
           <Route path="/stories" exact component={Stories} />
           <Route path="/contactUs" exact component={ContactUs} />
           <Route path="/aboutUs" exact component={AboutUs} />
+          <div className={classes.Footer}>
+            <ul>
+              <li>
+                <NavLink className={classes.NavLink} tag={RRNavLink} to="/home">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={classes.NavLink}
+                  tag={RRNavLink}
+                  to="contactUs"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <a href="https://twitter.com/">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/">Youtube</a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </Router>
     );
