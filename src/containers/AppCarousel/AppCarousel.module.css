@@ -1,0 +1,34 @@
+.AppCarousel {
+  background-color: #1b1b1b;
+  margin-bottom: 20px;
+}
+
+.AppCarousel div div img {
+  width: 68%;
+  height: 68%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 17%;
+}
+.AppCarousel a span {
+  display: none;
+}
+.CarouselIndicators {
+  top: 85%;
+}
+.CarouselIndicators li {
+  background-color: grey !important;
+  border-radius: 50% !important;
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  cursor: pointer;
+  -webkit-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+  margin: 8% 2px 0 2px;
+}
+.CarouselIndicators li.active {
+  background-color: #245e7d !important;
+}
