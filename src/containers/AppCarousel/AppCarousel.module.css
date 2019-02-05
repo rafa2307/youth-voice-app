@@ -24,9 +24,9 @@
   height: 10px !important;
   opacity: 1 !important;
   cursor: pointer;
-  -webkit-transition: all linear 0.1s;
-  -o-transition: all linear 0.1s;
-  transition: all linear 0.1s;
+  -webkit-transition: all linear 0.5s !important;
+  -o-transition: all linear 0.5s !important;
+  transition: all linear 0.5s !important;
   margin: 8% 2px 0 2px;
 }
 .CarouselIndicators li.active {

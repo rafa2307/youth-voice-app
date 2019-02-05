@@ -16,7 +16,6 @@ const items = [
   },
   {
     src: require('../../assets/img/Dragonfly.jpg')
-    // src: require('../../assets/img/Islam.jpg')
   }
 ];
 
