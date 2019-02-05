@@ -1,2 +1,23 @@
-.Home {
+.Home div div h1 {
+  color: #245e7d;
+  font-weight: 400;
+}
+
+.VoicesLogo {
+  padding-right: 190px;
+  text-align: center;
+  float: right;
+  padding-left: 100px;
+  margin: auto;
+}
+
+.VoicesLogo img {
+  width: 60% !important;
+  height: auto;
+  margin: auto;
+}
+
+.VoicesLogo p {
+  padding: 16px;
+  margin: 0px 8%;
 }
