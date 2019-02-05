@@ -1,0 +1,12 @@
+.Program {
+  padding-left: 300px;
+  text-align: center;
+  margin: auto;
+}
+.Program img {
+  width: 60% !important;
+}
+.Program p {
+  padding: 16px;
+  margin: 0px 8%;
+}
