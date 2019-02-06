@@ -38,6 +38,7 @@
   margin-top: 30px;
 }
 .AllPosts {
+  color: white;
   background-color: #1c4b64;
   border-radius: 5px;
   width: 50%;
@@ -46,9 +47,10 @@
   text-align: center;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
 .AllPosts:hover {
+  color: white;
   background-color: #15384b;
 }
 .BottomContainer {
