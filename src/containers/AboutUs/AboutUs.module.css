@@ -1,3 +1,6 @@
+.AboutUs {
+  min-height: 533px;
+}
 .Header {
   color: #245e7d;
   padding-left: 2%;
@@ -5,13 +8,6 @@
   margin-bottom: 40px;
 }
 
-.Member img {
-  width: 50%;
-  margin: 0 25% !important;
-}
-.Member p {
-  text-align: center;
-}
 .Pages {
   margin: 0 50%;
 }

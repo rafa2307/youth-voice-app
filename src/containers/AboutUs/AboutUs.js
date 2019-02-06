@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import Member from '../../components/Member/Member';
 
 import classes from './AboutUs.module.css';
 
@@ -11,58 +12,70 @@ export default class AboutUs extends Component {
       membersPerPage: 8,
       members: [
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info: 'test info'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info: 'test info'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info: 'test info'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info: 'test info'
         },
         {
-          img: 'Aboutteamsnip',
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'Aboutteamsnip',
           info:
             ' dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         }
@@ -86,13 +99,7 @@ export default class AboutUs extends Component {
     const renderMembers = currentMembers.map((member, index) => {
       return (
         <Col key={index} md="3">
-          <div className={classes.Member}>
-            <img
-              alt={member.img}
-              src={require('../../assets/img/Aboutteamsnip.png')}
-            />
-            <p>{member.info}</p>
-          </div>
+          <Member alt={member.alt} src={member.img} text={member.info} />
         </Col>
       );
     });
