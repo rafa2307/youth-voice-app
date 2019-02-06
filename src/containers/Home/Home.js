@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, NavLink } from 'reactstrap';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import Program from '../../components/HomeProgram/HomeProgram';
 import NewsNode from '../../components/NewsNode/NewsNode';
 import VideoNode from '../../components/VideoNode/VideoNode';
@@ -81,8 +82,10 @@ export default class Home extends Component {
           <Col>
             <h1>OUR PROGRAMS</h1>
           </Col>
-          <Row>{renderPrograms}</Row>
-          <Row>
+          <Row className={classes.ProgramSection}>{renderPrograms}</Row>
+        </Container>
+        <Container className={classes.BlueContainer}>
+          <Row className={classes.VideoSection}>
             <Col md="6">
               <h4>News</h4>
               {renderNews}
@@ -91,6 +94,14 @@ export default class Home extends Component {
               <h4>Videos</h4>
               {renderVideos}
             </Col>
+            <NavLink
+              className={classes.AllPosts}
+              tag={RRNavLink}
+              to="stories"
+              activeClassName="active"
+            >
+              All Posts
+            </NavLink>
           </Row>
         </Container>
       </div>

@@ -21,3 +21,31 @@
   padding: 16px;
   margin: 0px 8%;
 }
+.ProgramSection {
+  margin-bottom: 30px;
+}
+
+.BlueContainer {
+  background-color: #245e7d;
+  max-width: 100% !important;
+  padding: 1px 14% !important;
+}
+.BlueContainer div div h4 {
+  color: #cfb364;
+  font-weight: 400;
+}
+.VideoSection {
+  margin-top: 30px;
+}
+.AllPosts {
+  background-color: #1c4b64;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 12px;
+  margin: 0 0 10px 12px;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.AllPosts:hover {
+  background-color: #15384b;
+}
