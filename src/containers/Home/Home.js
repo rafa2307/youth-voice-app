@@ -27,19 +27,19 @@ export default class Home extends Component {
       ],
       news: [
         {
-          img: require('../../assets/img/images.png'),
+          img: require('../../assets/img/Aboutteamsnip.png'),
           alt: 'img',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: require('../../assets/img/images.png'),
+          img: require('../../assets/img/Aboutteamsnip.png'),
           alt: 'img',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
         },
         {
-          img: require('../../assets/img/images.png'),
+          img: require('../../assets/img/Aboutteamsnip.png'),
           alt: 'img',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
@@ -50,12 +50,30 @@ export default class Home extends Component {
           title: 'Video Title',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA'
         }
+      ],
+      supporters: [
+        {
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'img'
+        },
+        {
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'img'
+        },
+        {
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'img'
+        },
+        {
+          img: require('../../assets/img/Aboutteamsnip.png'),
+          alt: 'img'
+        }
       ]
     };
   }
 
   render() {
-    const { programs, news, videos } = this.state;
+    const { programs, news, videos, supporters } = this.state;
     const renderPrograms = programs.map((program, index) => {
       return (
         <Program
@@ -73,6 +91,17 @@ export default class Home extends Component {
     });
     const renderVideos = videos.map((video, index) => {
       return <VideoNode key={index} src={video.src} title={video.title} />;
+    });
+    const renderSupporters = supporters.map((supporter, index) => {
+      return (
+        <Col key={index} md="3">
+          <img
+            className={classes.Supporter}
+            src={supporter.img}
+            alt={supporter.alt}
+          />
+        </Col>
+      );
     });
 
     return (
@@ -103,6 +132,10 @@ export default class Home extends Component {
               All Posts
             </NavLink>
           </Row>
+        </Container>
+        <Container className={classes.BottomContainer}>
+          <h2>OUR SUPPORTERS AND PARTNERS</h2>
+          <Row>{renderSupporters}</Row>
         </Container>
       </div>
     );

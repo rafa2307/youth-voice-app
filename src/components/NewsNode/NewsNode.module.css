@@ -3,7 +3,7 @@
 }
 .NewsNode img {
   display: inline;
-  width: 20%;
+  width: 40%;
 }
 .NewsNode p {
   display: inline;
@@ -16,13 +16,13 @@
     margin: 0 0 120px 0;
   }
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 775px) {
   .NewsNode {
-    margin: 0 0 70px 0;
+    margin: 0 0 120px 0;
   }
 }
 @media only screen and (max-width: 465px) {
   .NewsNode {
-    margin: 0 0 100px 0;
+    margin: 0 0 120px 0;
   }
 }
