@@ -6,8 +6,8 @@
 }
 
 .Member img {
-  width: 90px;
-  margin: 0 0 40px 82px;
+  width: 50%;
+  margin: 0 25% !important;
 }
 .Member p {
   text-align: center;

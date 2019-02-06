@@ -89,7 +89,7 @@ export default class AboutUs extends Component {
           <div className={classes.Member}>
             <img
               alt={member.img}
-              src={require('../../assets/img/images.png')}
+              src={require('../../assets/img/Aboutteamsnip.png')}
             />
             <p>{member.info}</p>
           </div>
