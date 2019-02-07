@@ -22,6 +22,30 @@
 .StorySection {
   background-color: #133445;
 }
+.Pages {
+  margin: 0 49%;
+}
+.PageNumberActive {
+  list-style: none;
+  display: inline;
+  color: #245e7d;
+  cursor: context-menu;
+  font-size: 250%;
+  padding-right: 2%;
+}
+
+.PageNumberNotActive {
+  list-style: none;
+  display: inline;
+  color: grey;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 250%;
+  padding-right: 2%;
+}
 
 @media only screen and (max-width: 1065px) {
   .StorySection div {
@@ -36,5 +60,8 @@
 @media only screen and (max-width: 436px) {
   .StorySection div {
     margin-right: 50px;
+  }
+  .Pages {
+    margin: 0 43%;
   }
 }

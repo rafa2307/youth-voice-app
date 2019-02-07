@@ -9,6 +9,8 @@ export default class Stories extends Component {
   constructor() {
     super();
     this.state = {
+      currentPage: 1,
+      storiesPerPage: 9,
       stories: [
         {
           header: 'Story 1',
@@ -168,14 +170,44 @@ export default class Stories extends Component {
         }
       ]
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(event) {
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
   }
   render() {
-    const { stories } = this.state;
-    const renderStories = stories.map((story, index) => {
+    const { stories, currentPage, storiesPerPage } = this.state;
+    const indexOfLastStory = currentPage * storiesPerPage;
+    const indexOfFirstStory = indexOfLastStory - storiesPerPage;
+    const currentStories = stories.slice(indexOfFirstStory, indexOfLastStory);
+    const renderStories = currentStories.map((story, index) => {
       return (
         <Col key={index} md="4">
           <Story header={story.header} src={story.src} text={story.text} />
         </Col>
+      );
+    });
+
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(stories.length / storiesPerPage); i++) {
+      pageNumbers.push(i);
+    }
+    const renderPageNumbers = pageNumbers.map(number => {
+      const isActive =
+        number === this.state.currentPage
+          ? classes.PageNumberActive
+          : classes.PageNumberNotActive;
+      return (
+        <li
+          key={number}
+          id={number}
+          className={isActive}
+          onClick={this.handleClick}
+        >
+          &bull;
+        </li>
       );
     });
     return (
@@ -185,9 +217,12 @@ export default class Stories extends Component {
             <StoryHeader />
           </Col>
           <Col className={classes.StorySearch}>
-            <SearchField placeholder="Search Story" />
+            <SearchField placeholder="Search Stories" />
           </Col>
-          <Row className={classes.StorySection}>{renderStories}</Row>
+          <Row className={classes.StorySection}>
+            {renderStories}
+            <div className={classes.Pages}>{renderPageNumbers}</div>
+          </Row>
         </Container>
       </div>
     );
