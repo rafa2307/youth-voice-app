@@ -30,6 +30,7 @@ export default class Landing extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.closeNavbar = this.closeNavbar.bind(this);
     this.state = {
       isOpen: false
     };
@@ -38,6 +39,12 @@ export default class Landing extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+
+  closeNavbar() {
+    if (this.state.isOpen === true) {
+      this.toggle();
+    }
   }
 
   render() {
@@ -64,6 +71,7 @@ export default class Landing extends Component {
                 <Nav navbar>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="/home"
@@ -74,6 +82,7 @@ export default class Landing extends Component {
                   </NavItem>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="programs"
@@ -84,6 +93,7 @@ export default class Landing extends Component {
                   </NavItem>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="participate"
@@ -94,6 +104,7 @@ export default class Landing extends Component {
                   </NavItem>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="stories"
@@ -104,6 +115,7 @@ export default class Landing extends Component {
                   </NavItem>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="contactUs"
@@ -114,6 +126,7 @@ export default class Landing extends Component {
                   </NavItem>
                   <NavItem className={classes.Item}>
                     <NavLink
+                      onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
                       to="aboutUs"
@@ -145,6 +158,7 @@ export default class Landing extends Component {
               <ul>
                 <li>
                   <NavLink
+                    onClick={this.closeNavbar}
                     className={classes.NavLink}
                     tag={RRNavLink}
                     to="/home"
@@ -154,6 +168,7 @@ export default class Landing extends Component {
                 </li>
                 <li>
                   <NavLink
+                    onClick={this.closeNavbar}
                     className={classes.NavLink}
                     tag={RRNavLink}
                     to="contactUs"
