@@ -128,7 +128,7 @@ export default class Landing extends Component {
                     <FaYoutube className={classes.Youtube} />
                   </NavItem>
                   <NavItem className={classes.SearchItem}>
-                    <SearchField placeholder="Search item" />
+                    <SearchField placeholder="Search" />
                   </NavItem>
                 </Nav>
               </Collapse>

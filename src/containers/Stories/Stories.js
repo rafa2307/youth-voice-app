@@ -185,7 +185,7 @@ export default class Stories extends Component {
             <StoryHeader />
           </Col>
           <Col className={classes.StorySearch}>
-            <SearchField placeholder="Search item" />
+            <SearchField placeholder="Search Story" />
           </Col>
           <Row className={classes.StorySection}>{renderStories}</Row>
         </Container>
