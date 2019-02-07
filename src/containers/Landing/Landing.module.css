@@ -29,7 +29,7 @@
 .SocialItem svg {
   margin: 9px;
   font-size: 24pt;
-  color: rgb(146, 146, 146);
+  color: #929292;
   -webkit-transition: color 0.1s linear;
   -o-transition: color 0.1s linear;
   transition: color 0.1s linear;
