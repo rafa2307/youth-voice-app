@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Stories.css';
+import classes from './Stories.module.css';
 export default class Stories extends Component {
   render() {
-    return <div className="stories">stories</div>;
+    return <div className={classes.Stories}>stories</div>;
   }
 }
