@@ -1,0 +1,28 @@
+.Story {
+  width: 354px;
+  background-color: #1c4b64;
+  padding: 10px;
+  margin: 10%;
+}
+.Story h3,
+.Story p {
+  color: white !important;
+}
+.Story iframe {
+  width: 95%;
+}
+@media only screen and (max-width: 1278px) {
+  .Story {
+    margin: 6%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Story {
+    margin: 4%;
+  }
+}
+@media only screen and (max-width: 436px) {
+  .Story {
+    margin: 2%;
+  }
+}

@@ -1,4 +1,40 @@
-.Stories {
-  background-color: darkslategray;
-  height: 500px;
+.StoriesContainer {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+.HeaderCol {
+  margin: 60px 10% 50px 3% !important;
+  padding-right: 10% !important;
+}
+.StorySearch {
+  height: 50px;
+  padding: 7px 0 0 0 !important;
+  background-color: #d3d3d3;
+}
+.StorySearch div {
+  float: right;
+  margin-right: 2%;
+}
+.StorySection {
+  background-color: #133445;
+}
+
+@media only screen and (max-width: 1065px) {
+  .StorySection div {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .StorySection div {
+    margin-right: 100px;
+  }
+}
+@media only screen and (max-width: 436px) {
+  .StorySection div {
+    margin-right: 50px;
+  }
 }
