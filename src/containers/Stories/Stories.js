@@ -7,6 +7,7 @@ import StoryHeader from '../../components/StoryHeader/StoryHeader';
 import Story from '../../components/Story/Story';
 export default class Stories extends Component {
   constructor() {
+    //set state only call from api once, notice how rendered stories is empty
     super();
     this.state = {
       currentPage: 1,
@@ -16,67 +17,67 @@ export default class Stories extends Component {
           header: 'Story 1',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 2',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'bob 3',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 4',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 5',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 6',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 7',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit bob, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit bob, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 8',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 9',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 10',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 11',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 12',
@@ -176,19 +177,20 @@ export default class Stories extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
+  //fill rendered stories with data from youtube
   componentWillMount() {
     const { stories } = this.state;
     this.setState({
       renderedStories: stories.slice()
     });
   }
-
+  //for handeling current page switching in pagination
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
     });
   }
-
+  //function for searching stories
   onChange(value) {
     const { stories } = this.state;
     const replacementStories = [];
@@ -204,6 +206,7 @@ export default class Stories extends Component {
   }
 
   render() {
+    //work out details of pagination
     const { renderedStories, currentPage, storiesPerPage } = this.state;
     const indexOfLastStory = currentPage * storiesPerPage;
     const indexOfFirstStory = indexOfLastStory - storiesPerPage;
@@ -211,7 +214,7 @@ export default class Stories extends Component {
       indexOfFirstStory,
       indexOfLastStory
     );
-
+    //render stories and page numbers
     const showStories = currentStories.map((story, index) => {
       return (
         <Col key={index} md="4">
@@ -228,22 +231,27 @@ export default class Stories extends Component {
     ) {
       pageNumbers.push(i);
     }
-    const renderPageNumbers = pageNumbers.map(number => {
-      const isActive =
-        number === this.state.currentPage
-          ? classes.PageNumberActive
-          : classes.PageNumberNotActive;
-      return (
-        <li
-          key={number}
-          id={number}
-          className={isActive}
-          onClick={this.handleClick}
-        >
-          &bull;
-        </li>
-      );
-    });
+    let renderPageNumbers = [];
+    // display page dots if pages are higher than one
+    if (pageNumbers.length > 1) {
+      renderPageNumbers = pageNumbers.map(number => {
+        const isActive =
+          number === this.state.currentPage
+            ? classes.PageNumberActive
+            : classes.PageNumberNotActive;
+        return (
+          <li
+            key={number}
+            id={number}
+            className={isActive}
+            onClick={this.handleClick}
+          >
+            &bull;
+          </li>
+        );
+      });
+    }
+
     return (
       <div className={classes.Stories}>
         <Container className={classes.StoriesContainer}>

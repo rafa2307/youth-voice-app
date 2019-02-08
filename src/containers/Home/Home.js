@@ -10,6 +10,7 @@ import classes from './Home.module.css';
 export default class Home extends Component {
   constructor() {
     super();
+    //where I would pull data
     this.state = {
       programs: [
         {
@@ -74,6 +75,7 @@ export default class Home extends Component {
 
   render() {
     const { programs, news, videos, supporters } = this.state;
+    // render all component lists from state arrays
     const renderPrograms = programs.map((program, index) => {
       return (
         <Program

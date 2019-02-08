@@ -28,13 +28,14 @@ import AboutUs from '../AboutUs/AboutUs';
 export default class Landing extends Component {
   constructor(props) {
     super(props);
-
+    //bind functions, note that collapse is not open from the beginning
     this.toggle = this.toggle.bind(this);
     this.closeNavbar = this.closeNavbar.bind(this);
     this.state = {
       isOpen: false
     };
   }
+  //
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -147,6 +148,7 @@ export default class Landing extends Component {
               </Collapse>
             </Navbar>
             <hr className={classes.Special} />
+            {/* Set routes for app */}
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />
             <Route path="/programs" exact component={Programs} />
@@ -175,6 +177,7 @@ export default class Landing extends Component {
                   >
                     Contact Us
                   </NavLink>
+                  {/* Links for social media */}
                 </li>
                 <li>
                   <a href="https://twitter.com/">Twitter</a>

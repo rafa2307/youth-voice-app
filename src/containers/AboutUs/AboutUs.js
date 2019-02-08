@@ -7,6 +7,7 @@ import classes from './AboutUs.module.css';
 export default class AboutUs extends Component {
   constructor() {
     super();
+    //set state for about us page
     this.state = {
       currentPage: 1,
       membersPerPage: 8,
@@ -81,9 +82,10 @@ export default class AboutUs extends Component {
         }
       ]
     };
+    //function must be bound
     this.handleClick = this.handleClick.bind(this);
   }
-
+  //function to keep track of current page in pagination
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
@@ -91,11 +93,13 @@ export default class AboutUs extends Component {
   }
 
   render() {
+    //determine pagination details
     const { members, currentPage, membersPerPage } = this.state;
     const indexOfLastMember = currentPage * membersPerPage;
     const indexOfFirstMember = indexOfLastMember - membersPerPage;
     const currentMembers = members.slice(indexOfFirstMember, indexOfLastMember);
 
+    //render lists of components or elements
     const renderMembers = currentMembers.map((member, index) => {
       return (
         <Col key={index} md="3">
@@ -104,6 +108,7 @@ export default class AboutUs extends Component {
       );
     });
 
+    //determine number of pages
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(members.length / membersPerPage); i++) {
       pageNumbers.push(i);

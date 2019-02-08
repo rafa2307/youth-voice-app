@@ -7,6 +7,7 @@ import {
 } from 'reactstrap';
 
 import classes from './AppCarousel.module.css';
+//items for carousel
 const items = [
   {
     src: require('../../assets/img/Dragonfly.jpg')
@@ -29,7 +30,7 @@ class AppCarousel extends Component {
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
   }
-
+  //reactstrap carousel functions
   onExiting() {
     this.animating = true;
   }
@@ -63,7 +64,7 @@ class AppCarousel extends Component {
 
   render() {
     const { activeIndex } = this.state;
-
+    //render items for carousel display
     const slides = items.map((item, index) => {
       return (
         <CarouselItem
@@ -77,6 +78,7 @@ class AppCarousel extends Component {
     });
 
     return (
+      // Carousel display
       <Carousel
         className={classes.AppCarousel}
         activeIndex={activeIndex}
