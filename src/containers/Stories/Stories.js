@@ -184,7 +184,7 @@ export default class Stories extends Component {
       renderedStories: stories.slice()
     });
   }
-  //for handeling current page switching in pagination
+  //for handling current page switching in pagination
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
