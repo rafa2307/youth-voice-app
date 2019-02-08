@@ -25,7 +25,7 @@ export default class Stories extends Component {
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
-          header: 'Story 3',
+          header: 'bob 3',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
@@ -52,7 +52,7 @@ export default class Stories extends Component {
           header: 'Story 7',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit bob, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 8',
@@ -148,7 +148,7 @@ export default class Stories extends Component {
           header: 'Story 23',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, bob adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
         },
         {
           header: 'Story 24',
@@ -166,23 +166,53 @@ export default class Stories extends Component {
           header: 'Story 26',
           src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
           text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
+            'Lorem ipsum dolor sit amet, story adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
         }
-      ]
+      ],
+      renderedStories: []
     };
     this.handleClick = this.handleClick.bind(this);
+
+    this.onChange = this.onChange.bind(this);
   }
+
+  componentWillMount() {
+    const { stories } = this.state;
+    this.setState({
+      renderedStories: stories.slice()
+    });
+  }
+
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
     });
   }
+
+  onChange(value) {
+    const { stories } = this.state;
+    const replacementStories = [];
+    for (let i = 0; i < stories.length; i++) {
+      if (
+        stories[i].header.toLowerCase().includes(value.toLowerCase()) ||
+        stories[i].text.toLowerCase().includes(value.toLowerCase())
+      ) {
+        replacementStories.push(stories[i]);
+      }
+    }
+    this.setState({ renderedStories: replacementStories.slice() });
+  }
+
   render() {
-    const { stories, currentPage, storiesPerPage } = this.state;
+    const { renderedStories, currentPage, storiesPerPage } = this.state;
     const indexOfLastStory = currentPage * storiesPerPage;
     const indexOfFirstStory = indexOfLastStory - storiesPerPage;
-    const currentStories = stories.slice(indexOfFirstStory, indexOfLastStory);
-    const renderStories = currentStories.map((story, index) => {
+    const currentStories = renderedStories.slice(
+      indexOfFirstStory,
+      indexOfLastStory
+    );
+
+    const showStories = currentStories.map((story, index) => {
       return (
         <Col key={index} md="4">
           <Story header={story.header} src={story.src} text={story.text} />
@@ -191,7 +221,11 @@ export default class Stories extends Component {
     });
 
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(stories.length / storiesPerPage); i++) {
+    for (
+      let i = 1;
+      i <= Math.ceil(renderedStories.length / storiesPerPage);
+      i++
+    ) {
       pageNumbers.push(i);
     }
     const renderPageNumbers = pageNumbers.map(number => {
@@ -217,10 +251,13 @@ export default class Stories extends Component {
             <StoryHeader />
           </Col>
           <Col className={classes.StorySearch}>
-            <SearchField placeholder="Search Stories" />
+            <SearchField
+              placeholder="Search Stories"
+              onChange={this.onChange}
+            />
           </Col>
           <Row className={classes.StorySection}>
-            {renderStories}
+            {showStories}
             <div className={classes.Pages}>{renderPageNumbers}</div>
           </Row>
         </Container>

@@ -1,3 +1,6 @@
+body {
+  height: 100%;
+}
 .StoriesContainer {
   margin: 0 !important;
   padding: 0 !important;
@@ -21,6 +24,7 @@
 }
 .StorySection {
   background-color: #133445;
+  min-height: 300px;
 }
 .Pages {
   margin: 0 49%;
