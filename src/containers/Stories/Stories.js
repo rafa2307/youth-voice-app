@@ -202,7 +202,10 @@ export default class Stories extends Component {
         replacementStories.push(stories[i]);
       }
     }
-    this.setState({ renderedStories: replacementStories.slice() });
+    this.setState({
+      renderedStories: replacementStories.slice(),
+      currentPage: 1
+    });
   }
 
   render() {
