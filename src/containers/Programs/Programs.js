@@ -1,38 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
 import Program from '../../components/Program/Program';
 import classes from './Programs.module.css';
-export default class Programs extends Component {
-  constructor() {
-    super();
-    this.state = {
-      programs: [
-        {
-          src: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'team snip',
-          title: 'Title',
-          text:
-            'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-        },
-        {
-          src: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'team snip',
-          title: 'Title',
-          text:
-            'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-        },
-        {
-          src: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'team snip',
-          title: 'Title',
-          text:
-            'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-        }
-      ]
-    };
-  }
+class Programs extends Component {
   render() {
-    const { programs } = this.state;
+    const { programs } = this.props;
     const renderPrograms = programs.map((program, index) => {
       return (
         <Program
@@ -54,3 +27,10 @@ export default class Programs extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    programs: state.programs
+  };
+};
+export default connect(mapStateToProps)(Programs);
