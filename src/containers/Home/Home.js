@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Container, Row, Col, NavLink } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import Program from '../../components/HomeProgram/HomeProgram';
@@ -7,74 +8,9 @@ import VideoNode from '../../components/VideoNode/VideoNode';
 import AppCarousel from '../AppCarousel/AppCarousel';
 import classes from './Home.module.css';
 
-export default class Home extends Component {
-  constructor() {
-    super();
-    //where I would pull data
-    this.state = {
-      programs: [
-        {
-          img: require('../../assets/img/YouthVoicesLogo.jpg'),
-          alt: 'Youth Voices',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque egestas, turpis a feugiat dictum, augue maurisiaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/VoicesWithoutBorders.png'),
-          alt: 'Youth Voices',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque egestas, turpis a feugiat dictum, augue maurisiaculis felis, eget ultrices magna nibh ut lectus.'
-        }
-      ],
-      news: [
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        }
-      ],
-      videos: [
-        {
-          title: 'Video Title',
-          src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA'
-        }
-      ],
-      supporters: [
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'img'
-        }
-      ]
-    };
-  }
-
+class Home extends Component {
   render() {
-    const { programs, news, videos, supporters } = this.state;
+    const { programs, news, videos, supporters } = this.props;
     // render all component lists from state arrays
     const renderPrograms = programs.map((program, index) => {
       return (
@@ -143,3 +79,12 @@ export default class Home extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    programs: state.homePrograms,
+    news: state.news,
+    videos: state.homeVideos,
+    supporters: state.supporters
+  };
+};
+export default connect(mapStateToProps)(Home);
