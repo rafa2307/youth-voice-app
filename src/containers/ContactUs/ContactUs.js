@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AppForm from '../AppForm/AppForm';
+import FormCard from '../../components/FormCard/FormCard';
 
 import classes from './ContactUs.module.css';
 
 export default class ContactUs extends Component {
+  constructor() {
+    super();
+    this.state = {
+      card: {
+        email: 'Aliquip et incididunt et nostrud.',
+        address:
+          'Eu mollit pariatur aliquip amet mollit eiusmod qui. Ipsum eamagna occaecat culpa ullamco pariatur ut. Non commodo minim irure consequat. Consectetur deserunt enim qui esse. Mollitqui ut incididunt velit incididunt.'
+      }
+    };
+  }
   render() {
+    const { card } = this.state;
     return (
       <div className={classes.ContactUs}>
         <Container>
@@ -28,18 +40,7 @@ export default class ContactUs extends Component {
               <AppForm />
             </Col>
             <Col md="6">
-              <div className={classes.FormCard}>
-                <span className={classes.CardTitle}>Email:</span>{' '}
-                <span>Aliquip et incididunt et nostrud.</span>
-                <br />
-                <span className={classes.CardTitle}>Address:</span>{' '}
-                <span>
-                  Eu mollit pariatur aliquip amet mollit eiusmod qui. Ipsum ea
-                  magna occaecat culpa ullamco pariatur ut. Non commodo minim
-                  irure consequat. Consectetur deserunt enim qui esse. Mollit
-                  qui ut incididunt velit incididunt.
-                </span>
-              </div>
+              <FormCard email={card.email} address={card.address} />
             </Col>
           </Row>
         </Container>

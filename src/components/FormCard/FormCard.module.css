@@ -1,0 +1,15 @@
+.FormCard {
+  width: 80%;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 60px;
+  box-shadow: 1px 1px 1px 1px #363636;
+  -moz-box-shadow: 1px 1px 1px 1px #363636;
+  -webkit-box-shadow: 1px 1px 1px 1px #363636;
+}
+
+.CardTitle {
+  font-size: 17pt;
+  margin: 0 6px 3px 0;
+  color: #245e7d;
+}
