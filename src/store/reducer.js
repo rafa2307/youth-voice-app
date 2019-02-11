@@ -288,6 +288,17 @@ const initialState = {
         ' dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
     }
   ],
+  pictures: [
+    {
+      src: require('../assets/img/Dragonfly.jpg')
+    },
+    {
+      src: require('../assets/img/Dragonfly.jpg')
+    },
+    {
+      src: require('../assets/img/Dragonfly.jpg')
+    }
+  ],
   card: {
     email: 'Aliquip et incididunt et nostrud.',
     address:

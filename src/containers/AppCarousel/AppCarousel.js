@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   Carousel,
   CarouselItem,
@@ -8,17 +9,6 @@ import {
 
 import classes from './AppCarousel.module.css';
 //items for carousel
-const items = [
-  {
-    src: require('../../assets/img/Dragonfly.jpg')
-  },
-  {
-    src: require('../../assets/img/Dragonfly.jpg')
-  },
-  {
-    src: require('../../assets/img/Dragonfly.jpg')
-  }
-];
 
 class AppCarousel extends Component {
   constructor(props) {
@@ -40,19 +30,21 @@ class AppCarousel extends Component {
   }
 
   next() {
+    const { pictures } = this.props;
     if (this.animating) return;
     const nextIndex =
-      this.state.activeIndex === items.length - 1
+      this.state.activeIndex === pictures.length - 1
         ? 0
         : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
+    const { pictures } = this.props;
     if (this.animating) return;
     const nextIndex =
       this.state.activeIndex === 0
-        ? items.length - 1
+        ? pictures.length - 1
         : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
@@ -63,9 +55,10 @@ class AppCarousel extends Component {
   }
 
   render() {
+    const { pictures } = this.props;
     const { activeIndex } = this.state;
     //render items for carousel display
-    const slides = items.map((item, index) => {
+    const slides = pictures.map((item, index) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -88,7 +81,7 @@ class AppCarousel extends Component {
         <CarouselIndicators
           cssModule={classes}
           className={classes.CarouselIndicators}
-          items={items}
+          items={pictures}
           activeIndex={activeIndex}
           onClickHandler={this.goToIndex}
         />
@@ -107,5 +100,9 @@ class AppCarousel extends Component {
     );
   }
 }
-
-export default AppCarousel;
+const mapStateToProps = state => {
+  return {
+    pictures: state.pictures
+  };
+};
+export default connect(mapStateToProps)(AppCarousel);
