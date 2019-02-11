@@ -237,7 +237,82 @@ const initialState = {
       text:
         'Lorem ipsum dolor sit amet, story adipiscing elit. Pellentesque egestas, turpis a feugiat dictum'
     }
-  ]
+  ],
+  members: [
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info: 'test info'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info: 'test info'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info: 'test info'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info: 'test info'
+    },
+    {
+      img: require('../assets/img/Aboutteamsnip.png'),
+      alt: 'Aboutteamsnip',
+      info:
+        ' dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
+    }
+  ],
+  card: {
+    email: 'Aliquip et incididunt et nostrud.',
+    address:
+      'Eu mollit pariatur aliquip amet mollit eiusmod qui. Ipsum eamagna occaecat culpa ullamco pariatur ut. Non commodo minim irure consequat. Consectetur deserunt enim qui esse. Mollitqui ut incididunt velit incididunt.'
+  }
 };
 
 const reducer = (state = initialState, action) => {

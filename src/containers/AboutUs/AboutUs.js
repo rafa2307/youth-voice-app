@@ -1,86 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import Member from '../../components/Member/Member';
 
 import classes from './AboutUs.module.css';
 
-export default class AboutUs extends Component {
+class AboutUs extends Component {
   constructor() {
     super();
     //set state for about us page
     this.state = {
       currentPage: 1,
-      membersPerPage: 8,
-      members: [
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info: 'test info'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info: 'test info'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit Pellentesque egestas, turpis a feugiat dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info: 'test info'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info: 'test info'
-        },
-        {
-          img: require('../../assets/img/Aboutteamsnip.png'),
-          alt: 'Aboutteamsnip',
-          info:
-            ' dictum, augue mauris iaculis felis, eget ultrices magna nibh ut lectus.'
-        }
-      ]
+      membersPerPage: 8
     };
     //function must be bound
     this.handleClick = this.handleClick.bind(this);
@@ -94,7 +25,8 @@ export default class AboutUs extends Component {
 
   render() {
     //determine pagination details
-    const { members, currentPage, membersPerPage } = this.state;
+    const { members } = this.props;
+    const { currentPage, membersPerPage } = this.state;
     const indexOfLastMember = currentPage * membersPerPage;
     const indexOfFirstMember = indexOfLastMember - membersPerPage;
     const currentMembers = members.slice(indexOfFirstMember, indexOfLastMember);
@@ -148,3 +80,10 @@ export default class AboutUs extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    members: state.members
+  };
+};
+
+export default connect(mapStateToProps)(AboutUs);

@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
 import AppForm from '../AppForm/AppForm';
 import FormCard from '../../components/FormCard/FormCard';
 
 import classes from './ContactUs.module.css';
 
-export default class ContactUs extends Component {
-  constructor() {
-    super();
-    this.state = {
-      card: {
-        email: 'Aliquip et incididunt et nostrud.',
-        address:
-          'Eu mollit pariatur aliquip amet mollit eiusmod qui. Ipsum eamagna occaecat culpa ullamco pariatur ut. Non commodo minim irure consequat. Consectetur deserunt enim qui esse. Mollitqui ut incididunt velit incididunt.'
-      }
-    };
-  }
+class ContactUs extends Component {
   render() {
-    const { card } = this.state;
+    const { card } = this.props;
     return (
       <div className={classes.ContactUs}>
         <Container>
@@ -48,3 +39,9 @@ export default class ContactUs extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    card: state.card
+  };
+};
+export default connect(mapStateToProps)(ContactUs);
