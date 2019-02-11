@@ -1,3 +1,7 @@
+.Landing {
+  height: 100%;
+  min-height: 100%;
+}
 .Logo {
   width: 80px;
   margin-left: -15px;

@@ -52,7 +52,7 @@ export default class Landing extends Component {
     return (
       <Router>
         <ScrollToTop>
-          <div className="Landing">
+          <div className={classes.Landing}>
             <Navbar light expand="xl">
               <NavbarBrand href="/">
                 <img
