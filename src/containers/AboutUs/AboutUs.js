@@ -137,8 +137,12 @@ export default class AboutUs extends Component {
           <h2 className={classes.Header}>About Our Team</h2>
         </div>
         <Container>
-          <Row>{renderMembers}</Row>
-          <div className={classes.Pages}>{renderPageNumbers}</div>
+          <Row>
+            {renderMembers}
+            <Col>
+              <div className={classes.Pages}>{renderPageNumbers}</div>
+            </Col>
+          </Row>
         </Container>
       </div>
     );
