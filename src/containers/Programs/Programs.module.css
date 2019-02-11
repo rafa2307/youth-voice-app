@@ -1,7 +1,7 @@
 .Programs {
   position: relative; /* needed for footer positioning*/
-  height: 100% !important;
-  min-height: 100% !important;
+
+  min-height: 100%;
 }
 .Header {
   color: #245e7d;

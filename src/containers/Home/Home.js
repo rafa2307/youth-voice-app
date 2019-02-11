@@ -12,24 +12,32 @@ class Home extends Component {
   render() {
     const { programs, news, videos, supporters } = this.props;
     // render all component lists from state arrays
-    const renderPrograms = programs.map((program, index) => {
+    const renderPrograms = () => {
       return (
-        <Program
-          key={index}
-          ProgramImage={program.img}
-          ImageAlt={program.alt}
-          P={program.text}
-        />
+        <>
+          <Program
+            key={0}
+            ProgramImage={programs[0].src}
+            ImageAlt={programs[0].alt}
+            P={programs[0].text}
+          />
+          <Program
+            key={1}
+            ProgramImage={programs[1].src}
+            ImageAlt={programs[1].alt}
+            P={programs[1].text}
+          />
+        </>
       );
-    });
+    };
     const renderNews = news.map((ele, index) => {
       return (
         <NewsNode key={index} img={ele.img} alt={ele.alt} text={ele.text} />
       );
     });
-    const renderVideos = videos.map((video, index) => {
-      return <VideoNode key={index} src={video.src} title={video.title} />;
-    });
+    const renderVideos = () => {
+      return <VideoNode key={1} src={videos[0].src} title={videos[0].header} />;
+    };
     const renderSupporters = supporters.map((supporter, index) => {
       return (
         <Col key={index} md="3">
@@ -49,7 +57,7 @@ class Home extends Component {
           <Col>
             <h1>OUR PROGRAMS</h1>
           </Col>
-          <Row className={classes.ProgramSection}>{renderPrograms}</Row>
+          <Row className={classes.ProgramSection}>{renderPrograms()}</Row>
         </Container>
         <Container className={classes.BlueContainer}>
           <Row className={classes.VideoSection}>
@@ -59,7 +67,7 @@ class Home extends Component {
             </Col>
             <Col md="6">
               <h4>Videos</h4>
-              {renderVideos}
+              {renderVideos()}
             </Col>
             <NavLink
               className={classes.AllPosts}
@@ -81,9 +89,9 @@ class Home extends Component {
 }
 const mapStateToProps = state => {
   return {
-    programs: state.homePrograms,
+    programs: state.programs,
     news: state.news,
-    videos: state.homeVideos,
+    videos: state.stories,
     supporters: state.supporters
   };
 };

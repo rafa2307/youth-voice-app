@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 
 const program = props => {
   return (
-    <>
+    <div className={classes.Program}>
       <Row>
         <Col sm="6">
           <img className={classes.TeamSnip} alt={props.alt} src={props.src} />
@@ -17,7 +17,7 @@ const program = props => {
         </Col>
       </Row>
       <hr />
-    </>
+    </div>
   );
 };
 
