@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import ScrollToTop from 'react-router-scroll-top';
 import SearchField from 'react-search-field';
-import { FaYoutube, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
 import classes from './Landing.module.css';
 
 import Home from '../Home/Home';
@@ -137,7 +137,7 @@ export default class Landing extends Component {
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.SocialItem}>
-                    <FaFacebook className={classes.Facebook} />
+                    <FaInstagram className={classes.Instagram} />
                     <FaTwitter className={classes.Twitter} />
                     <FaYoutube className={classes.Youtube} />
                   </NavItem>
@@ -186,7 +186,7 @@ export default class Landing extends Component {
                   <a href="https://www.youtube.com/">Youtube</a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/">Facebook</a>
+                  <a href="https://www.instagram.com/">Instagram</a>
                 </li>
               </ul>
             </div>

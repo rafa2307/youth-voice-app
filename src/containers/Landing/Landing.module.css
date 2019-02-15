@@ -38,8 +38,8 @@
   -o-transition: color 0.1s linear;
   transition: color 0.1s linear;
 }
-.Facebook:hover {
-  color: #3b5998;
+.Instagram:hover {
+  color: #c8009d;
 }
 .Twitter:hover {
   color: #1da1f2;
