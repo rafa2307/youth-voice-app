@@ -15,7 +15,12 @@ import {
 } from 'reactstrap';
 import ScrollToTop from 'react-router-scroll-top';
 import SearchField from 'react-search-field';
-import { FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa';
+import {
+  FaYoutube,
+  FaTwitter,
+  FaInstagram,
+  FaFacebookSquare
+} from 'react-icons/fa';
 import classes from './Landing.module.css';
 
 import Home from '../Home/Home';
@@ -137,9 +142,18 @@ export default class Landing extends Component {
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.SocialItem}>
-                    <FaInstagram className={classes.Instagram} />
-                    <FaTwitter className={classes.Twitter} />
-                    <FaYoutube className={classes.Youtube} />
+                    <a href="https://www.instagram.com/youthvoicescincinnati/">
+                      <FaInstagram className={classes.Instagram} />
+                    </a>
+                    <a href="https://twitter.com/YouthVoicesOhio">
+                      <FaTwitter className={classes.Twitter} />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA">
+                      <FaYoutube className={classes.Youtube} />
+                    </a>
+                    <a href="https://www.facebook.com/Youth-Voices-of-Greater-Cincinnati-1621864864582866">
+                      <FaFacebookSquare className={classes.Facebook} />
+                    </a>
                   </NavItem>
                   <NavItem className={classes.SearchItem}>
                     <SearchField placeholder="Search" />

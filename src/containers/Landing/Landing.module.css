@@ -14,7 +14,6 @@
 .NavLink {
   font-weight: 600;
   -webkit-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 .NavLink:hover {
@@ -35,8 +34,10 @@
   font-size: 24pt;
   color: #929292;
   -webkit-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
   transition: color 0.1s linear;
+}
+.Facebook:hover {
+  color: #3f5c9a;
 }
 .Instagram:hover {
   color: #c8009d;
@@ -64,6 +65,8 @@
   padding-top: 10px;
   list-style: none;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
@@ -76,6 +79,7 @@
   padding: 0;
   margin: 0 15px;
   color: white;
+  -webkit-transition: all linear 0.1s;
   transition: all linear 0.1s;
 }
 .Footer ul li a:hover {
