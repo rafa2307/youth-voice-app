@@ -43,10 +43,10 @@
   border-radius: 5px;
   width: 50%;
   margin-left: 12px;
-  margin: 0 0 10px 12px;
+  margin: 0 0 30px 12px;
   text-align: center;
   -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 .AllPosts:hover {
@@ -55,6 +55,9 @@
 }
 .BottomContainer {
   margin-bottom: 20px;
+}
+.HomeProgram {
+  width: 40% !important;
 }
 @media only screen and (max-width: 769px) {
   .Supporter {

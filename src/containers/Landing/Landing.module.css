@@ -86,7 +86,11 @@
   color: #1da1f2 !important;
   text-decoration: none;
 }
-
+@media only screen and (max-width: 1220px) {
+  .SocialItem svg {
+    font-size: 20pt;
+  }
+}
 @media only screen and (max-width: 1199px) {
   .SocialItem {
     position: relative;

@@ -4,13 +4,14 @@
 }
 
 .AppCarousel div div img {
-  width: 68%;
-  height: 68%;
+  width: 46%;
+  /* height: 12%; */
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 17%;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 29%;
 }
+
 .AppCarousel a span {
   display: none;
 }
@@ -25,7 +26,6 @@
   opacity: 1 !important;
   cursor: pointer;
   -webkit-transition: all linear 0.5s !important;
-  -o-transition: all linear 0.5s !important;
   transition: all linear 0.5s !important;
   margin: 8% 2px 0 2px;
 }

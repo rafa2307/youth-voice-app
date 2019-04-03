@@ -16,12 +16,14 @@ class Home extends Component {
       return (
         <>
           <Program
+            className={classes.HomeProgram}
             key={0}
             ProgramImage={programs[0].src}
             ImageAlt={programs[0].alt}
             P={programs[0].text}
           />
           <Program
+            className={classes.HomeProgram}
             key={1}
             ProgramImage={programs[1].src}
             ImageAlt={programs[1].alt}
