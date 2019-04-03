@@ -2,22 +2,36 @@ const initialState = {
   programs: [
     {
       src: require('../assets/img/YouthVoicesLogo.jpg'),
-      alt: 'team snip',
-      title: 'Title',
+      alt: 'Youth Voices',
+      title: 'Youth Voices',
       text:
         'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
     },
     {
       src: require('../assets/img/VoicesWithoutBorders.png'),
-      alt: 'team snip',
-      title: 'Title',
+      alt: 'Voices Without Borders',
+      title: 'Voices Without Borders',
       text:
         'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
     },
     {
-      src: require('../assets/img/Aboutteamsnip.png'),
-      alt: 'team snip',
-      title: 'Title',
+      src: require('../assets/img/norwood-logo.png'),
+      alt: 'Norwood',
+      title: 'Norwood',
+      text:
+        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
+    },
+    {
+      src: require('../assets/img/fuel-logo.png'),
+      alt: 'Fuel',
+      title: 'Fuel',
+      text:
+        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
+    },
+    {
+      src: require('../assets/img/fcm-logo.png'),
+      alt: 'FCM',
+      title: 'FCM',
       text:
         'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
     }
@@ -300,9 +314,13 @@ const initialState = {
     }
   ],
   card: {
-    email: 'Aliquip et incididunt et nostrud.',
-    address:
-      'Eu mollit pariatur aliquip amet mollit eiusmod qui. Ipsum eamagna occaecat culpa ullamco pariatur ut. Non commodo minim irure consequat. Consectetur deserunt enim qui esse. Mollitqui ut incididunt velit incididunt.'
+    email: 'youthvoicesofgreatercincinnati@gmail.com',
+    address: 'Norwood Middle School, 2060 Sherman Avenue, Norwood, Ohio 45212',
+    parking: 'you may park anywhere on our lot',
+    arrivalTime:
+      'Our school ends at 2:55. To avoid the end of school crowding by the stairs, try to come at 2:50.',
+    directions:
+      'The sign that indicates the building is a High School happens to be a historical marker.You will come to large gray stairs that lead to beige columns and a set of glass doors. Ring the bell to request entry. You will ring the bell again to gain access to the main office. At 2:55 your talk show hosts will meet you at the front office and accompany you to the television studio located past an indoor bridge.'
   }
 };
 

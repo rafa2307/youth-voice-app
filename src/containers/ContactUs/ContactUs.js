@@ -31,7 +31,13 @@ class ContactUs extends Component {
               <AppForm />
             </Col>
             <Col md="6">
-              <FormCard email={card.email} address={card.address} />
+              <FormCard
+                email={card.email}
+                address={card.address}
+                parking={card.parking}
+                arrival={card.arrivalTime}
+                directions={card.directions}
+              />
             </Col>
           </Row>
         </Container>
