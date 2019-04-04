@@ -335,6 +335,49 @@ const initialState = {
       inputType: 'textarea'
     }
   ],
+  adultFormProps: [
+    {
+      type: 'name',
+      title: 'What is your name?',
+      inputType: 'text'
+    },
+    {
+      type: 'homeArea',
+      title: 'Where are you from?',
+      inputType: 'text'
+    },
+    {
+      type: 'expertise',
+      title: 'What is your expertise?',
+      inputType: 'text'
+    },
+    {
+      type: 'availability',
+      title: 'What dates are you available for? You may list more than one.',
+      inputType: 'textarea'
+    },
+    {
+      type: 'topics',
+      title:
+        'What topic(s) are you interested in being interviewed about?le for? You may list more than one.',
+      inputType: 'textarea'
+    },
+    {
+      type: 'email',
+      title: 'What is your email?',
+      inputType: 'email'
+    },
+    {
+      type: 'phoneNumber',
+      title: 'What is your phone number? Please include the area code.',
+      inputType: 'text'
+    },
+    {
+      type: 'comments',
+      title: 'Do you have any comments or questions?',
+      inputType: 'textarea'
+    }
+  ],
   card: {
     email: 'youthvoicesofgreatercincinnati@gmail.com',
     address: 'Norwood Middle School, 2060 Sherman Avenue, Norwood, Ohio 45212',

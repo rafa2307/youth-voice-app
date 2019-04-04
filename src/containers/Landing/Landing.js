@@ -25,7 +25,7 @@ import classes from './Landing.module.css';
 
 import Home from '../Home/Home';
 import Programs from '../Programs/Programs';
-import Participate from '../Participate/Participate';
+import AdultParticipate from '../Participate/Adult/Participate';
 import Stories from '../Stories/Stories';
 import ContactUs from '../ContactUs/ContactUs';
 import AboutUs from '../AboutUs/AboutUs';
@@ -102,10 +102,10 @@ export default class Landing extends Component {
                       onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
-                      to="participate"
+                      to="adult-participate"
                       activeClassName="active"
                     >
-                      Participate
+                      Adult Talk Show
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.Item}>
@@ -166,7 +166,11 @@ export default class Landing extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/home" exact component={Home} />
             <Route path="/programs" exact component={Programs} />
-            <Route path="/participate" exact component={Participate} />
+            <Route
+              path="/adult-participate"
+              exact
+              component={AdultParticipate}
+            />
             <Route path="/stories" exact component={Stories} />
             <Route path="/contactUs" exact component={ContactUs} />
             <Route path="/aboutUs" exact component={AboutUs} />

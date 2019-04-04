@@ -8,7 +8,7 @@ import classes from './ContactUs.module.css';
 
 class ContactUs extends Component {
   render() {
-    const { card } = this.props;
+    const { card, formProps } = this.props;
     return (
       <div className={classes.ContactUs}>
         <Container>
@@ -28,7 +28,7 @@ class ContactUs extends Component {
           <Row>
             <Col md="6">
               <h3>Email Us</h3>
-              <AppForm />
+              <AppForm formProps={formProps} />
             </Col>
             <Col md="6">
               <FormCard
@@ -47,7 +47,8 @@ class ContactUs extends Component {
 }
 const mapStateToProps = state => {
   return {
-    card: state.card
+    card: state.card,
+    formProps: state.contactFormProps
   };
 };
 export default connect(mapStateToProps)(ContactUs);
