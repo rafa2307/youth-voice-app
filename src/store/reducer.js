@@ -313,6 +313,28 @@ const initialState = {
       src: require('../assets/img/Dragonfly.jpg')
     }
   ],
+  contactFormProps: [
+    {
+      type: 'name',
+      title: 'Your Name (required)',
+      inputType: 'text'
+    },
+    {
+      type: 'email',
+      title: 'Email Address (required)',
+      inputType: 'email'
+    },
+    {
+      type: 'subject',
+      title: 'Subject (required)',
+      inputType: 'text'
+    },
+    {
+      type: 'message',
+      title: 'Message (required)',
+      inputType: 'textarea'
+    }
+  ],
   card: {
     email: 'youthvoicesofgreatercincinnati@gmail.com',
     address: 'Norwood Middle School, 2060 Sherman Avenue, Norwood, Ohio 45212',

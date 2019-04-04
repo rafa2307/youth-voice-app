@@ -4,25 +4,45 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import classes from './AppForm.module.css';
 
 export default class AppForm extends Component {
+  formProps = [
+    {
+      type: 'name',
+      title: 'Your Name (required)',
+      inputType: 'text'
+    },
+    {
+      type: 'email',
+      title: 'Email Address (required)',
+      inputType: 'email'
+    },
+    {
+      type: 'subject',
+      title: 'Subject (required)',
+      inputType: 'text'
+    },
+    {
+      type: 'message',
+      title: 'Message (required)',
+      inputType: 'textarea'
+    }
+  ];
   render() {
+    const formGroups = this.formProps.map((formGroup, index) => {
+      return (
+        <FormGroup key={index}>
+          <Label for={formGroup.type}>{formGroup.title}</Label>
+          <Input
+            type={formGroup.inputType}
+            name={formGroup.type}
+            id={formGroup.type}
+          />
+        </FormGroup>
+      );
+    });
+
     return (
       <Form>
-        <FormGroup>
-          <Label for="name">Your Name (required)</Label>
-          <Input type="text" name="name" id="name" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="email">Email Address (required)</Label>
-          <Input type="email" name="email" id="email" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="subject">Subject (required)</Label>
-          <Input type="text" name="subject" id="subject" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="message">Message (required)</Label>
-          <Input type="textarea" name="message" id="message" />
-        </FormGroup>
+        {formGroups}
         <Button className={classes.FormButton}>Submit</Button>
       </Form>
     );
