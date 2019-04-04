@@ -26,6 +26,7 @@ import classes from './Landing.module.css';
 import Home from '../Home/Home';
 import Programs from '../Programs/Programs';
 import AdultParticipate from '../Participate/Adult/Participate';
+import YouthParticipate from '../Participate/Youth/Participate';
 import Stories from '../Stories/Stories';
 import ContactUs from '../ContactUs/ContactUs';
 import AboutUs from '../AboutUs/AboutUs';
@@ -113,6 +114,17 @@ export default class Landing extends Component {
                       onClick={this.closeNavbar}
                       className={classes.NavLink}
                       tag={RRNavLink}
+                      to="youth-participate"
+                      activeClassName="active"
+                    >
+                      Youth Talk Show
+                    </NavLink>
+                  </NavItem>
+                  <NavItem className={classes.Item}>
+                    <NavLink
+                      onClick={this.closeNavbar}
+                      className={classes.NavLink}
+                      tag={RRNavLink}
                       to="stories"
                       activeClassName="active"
                     >
@@ -170,6 +182,11 @@ export default class Landing extends Component {
               path="/adult-participate"
               exact
               component={AdultParticipate}
+            />
+            <Route
+              path="/youth-participate"
+              exact
+              component={YouthParticipate}
             />
             <Route path="/stories" exact component={Stories} />
             <Route path="/contactUs" exact component={ContactUs} />

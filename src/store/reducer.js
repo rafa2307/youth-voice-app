@@ -378,6 +378,54 @@ const initialState = {
       inputType: 'textarea'
     }
   ],
+  youthFormProps: [
+    {
+      type: 'name',
+      title: 'What is your name?',
+      inputType: 'text'
+    },
+    {
+      type: 'age',
+      title: 'How old are you?',
+      inputType: 'text'
+    },
+    {
+      type: 'topics',
+      title: 'What topics are you interested in?',
+      inputType: 'textarea'
+    },
+    {
+      type: 'school',
+      title: 'What school do you go to?',
+      inputType: 'text'
+    },
+    {
+      type: 'availability',
+      title: 'What are dates that you would be available?',
+      inputType: 'textarea'
+    },
+    {
+      type: 'email',
+      title: 'What is your email?',
+      inputType: 'email'
+    },
+    {
+      type: 'phoneNumber',
+      title: 'What is your phone number? Please include the area code.',
+      inputType: 'text'
+    },
+    {
+      type: 'otherAvailability',
+      title:
+        'Our shows are filmed at 3 PM on weekdays. Are you available at this time? If not, what else works for you?',
+      inputType: 'textarea'
+    },
+    {
+      type: 'comments',
+      title: 'Do you have any comments or questions?',
+      inputType: 'textarea'
+    }
+  ],
   card: {
     email: 'youthvoicesofgreatercincinnati@gmail.com',
     address: 'Norwood Middle School, 2060 Sherman Avenue, Norwood, Ohio 45212',

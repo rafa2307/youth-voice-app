@@ -1,0 +1,29 @@
+.Participate form {
+  margin: 20px 0 20px 40px;
+  width: 70%;
+}
+.Header {
+  color: #245e7d;
+  padding-top: 3%;
+  padding-left: 2%;
+  display: inline-block;
+}
+
+.divBanner {
+  background-color: #245e7d;
+  color: white;
+  padding-left: 4%;
+  padding-bottom: 1%;
+  padding-top: 0.5%;
+  font-weight: bold;
+}
+
+.StudentHeader {
+  color: #245e7d;
+  display: inline-block;
+}
+
+.AdultDiv {
+  display: inline-block;
+  width: 100%;
+}
