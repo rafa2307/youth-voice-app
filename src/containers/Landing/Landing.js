@@ -106,7 +106,7 @@ export default class Landing extends Component {
                       to="adult-participate"
                       activeClassName="active"
                     >
-                      Adult Talk Show
+                      Adult Sign Up
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.Item}>
@@ -117,7 +117,7 @@ export default class Landing extends Component {
                       to="youth-participate"
                       activeClassName="active"
                     >
-                      Youth Talk Show
+                      Youth Sign Up
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.Item}>
@@ -215,13 +215,22 @@ export default class Landing extends Component {
                   {/* Links for social media */}
                 </li>
                 <li>
-                  <a href="https://twitter.com/">Twitter</a>
+                  <a href="https://twitter.com/YouthVoicesOhio">Twitter</a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/">Youtube</a>
+                  <a href="https://www.facebook.com/Youth-Voices-of-Greater-Cincinnati-1621864864582866">
+                    Facebook
+                  </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/">Instagram</a>
+                  <a href="https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA">
+                    Youtube
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/youthvoicescincinnati/">
+                    Instagram
+                  </a>
                 </li>
               </ul>
             </div>

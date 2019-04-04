@@ -3,16 +3,17 @@
   min-height: 100%;
 }
 .Logo {
-  width: 80px;
+  width: 70px;
   margin-left: -15px;
 }
 
 .YouthVoiceImg {
-  width: 204px;
+  width: 150px;
 }
 
 .NavLink {
   font-weight: 600;
+  font-size: 12pt;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
@@ -71,7 +72,7 @@
   margin: 0;
 }
 .Footer ul li:first-child {
-  margin-left: 31%;
+  margin-left: 32%;
 }
 .Footer ul li a {
   font-weight: 400 !important;
@@ -86,12 +87,15 @@
   color: #1da1f2 !important;
   text-decoration: none;
 }
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1300px) {
   .SocialItem svg {
-    font-size: 20pt;
+    display: none;
   }
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1200px) {
+  .SocialItem svg {
+    display: inline-block;
+  }
   .SocialItem {
     position: relative;
     left: -11px;
