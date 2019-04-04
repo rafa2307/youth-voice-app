@@ -429,7 +429,7 @@ const initialState = {
   card: {
     email: 'youthvoicesofgreatercincinnati@gmail.com',
     address: 'Norwood Middle School, 2060 Sherman Avenue, Norwood, Ohio 45212',
-    parking: 'you may park anywhere on our lot',
+    parking: 'You may park anywhere on our lot.',
     arrivalTime:
       'Our school ends at 2:55. To avoid the end of school crowding by the stairs, try to come at 2:50.',
     directions:
