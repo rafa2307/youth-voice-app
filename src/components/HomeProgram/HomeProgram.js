@@ -8,7 +8,7 @@ const program = props => (
   <Col md="6" className={classes.Program}>
     <img src={props.ProgramImage} alt={props.ImageAlt} />
     <p>{props.P}</p>
-    <NavLink tag={RRNavLink} to="aboutUs" activeClassName="active">
+    <NavLink tag={RRNavLink} to="programs" activeClassName="active">
       Learn More
     </NavLink>
   </Col>
