@@ -1,82 +1,48 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'reactstrap';
-import Member from '../../components/Member/Member';
 
 import classes from './AboutUs.module.css';
 
 class AboutUs extends Component {
-  constructor() {
-    super();
-    //set state for about us page
-    this.state = {
-      currentPage: 1,
-      membersPerPage: 8
-    };
-    //function must be bound
-    this.handleClick = this.handleClick.bind(this);
-  }
-  //function to keep track of current page in pagination
-  handleClick(event) {
-    this.setState({
-      currentPage: Number(event.target.id)
-    });
-  }
-
   render() {
-    //determine pagination details
-    const { members } = this.props;
-    const { currentPage, membersPerPage } = this.state;
-    const indexOfLastMember = currentPage * membersPerPage;
-    const indexOfFirstMember = indexOfLastMember - membersPerPage;
-    const currentMembers = members.slice(indexOfFirstMember, indexOfLastMember);
-
-    //render lists of components or elements
-    const renderMembers = currentMembers.map((member, index) => {
-      return (
-        <Col key={index} md="3">
-          <Member alt={member.alt} src={member.img} text={member.info} />
-        </Col>
-      );
-    });
-
-    //determine number of pages
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(members.length / membersPerPage); i++) {
-      pageNumbers.push(i);
-    }
-
-    const renderPageNumbers = pageNumbers.map(number => {
-      const isActive =
-        number === this.state.currentPage
-          ? classes.PageNumberActive
-          : classes.PageNumberNotActive;
-      return (
-        <li
-          key={number}
-          id={number}
-          className={isActive}
-          onClick={this.handleClick}
-        >
-          &bull;
-        </li>
-      );
-    });
-
+    const imgSrc = require('../../assets/img/Dragonfly.jpg');
     return (
-      <div className={classes.AboutUs}>
-        <div className={classes.Header}>
-          <h2 className={classes.Header}>About Our Team</h2>
-        </div>
-        <Container>
-          <Row>
-            {renderMembers}
-            <Col>
-              <div className={classes.Pages}>{renderPageNumbers}</div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <Container className={classes.AboutUs}>
+        <h2 className={classes.Header}>About Us</h2>
+        <Row>
+          <Col className={classes.TextCol} md="8">
+            <p>
+              Youth Voices of Greater Cincinnati. YVOGC is a program in the
+              community of Cincinnati with an empowering goal to show teenagers
+              the value of their voices. Teens have the ability to host a talk
+              show in which they can star in and interview community members
+              for. The interview topics can range from a huge variety of topics
+              such as work, bullying, LGBTQ, cancer survivors and deployment.
+              Really, anything you are curious about or want to explore more.{' '}
+            </p>
+            <p>
+              Youth Voices has a parallel program called Voices Without Borders.
+              It is a similar program but offered to those who wish to do a talk
+              show in another language. The talk show program started in 2018 by
+              Leila Kubesch, a Foreign Language teacher at Norwood Middle
+              School. Mrs. Kubesch went to great measures to make the program
+              for her students possible.
+            </p>
+            <p>
+              We are inviting youth wishing to be a hosts, or adults wanting to
+              serve as a guest on our talk shows. Hosts can range from grades
+              8-12. Talk shows typically occur on weekdays beginning at 3:00
+              after school. The shows have no time limit as they can last from
+              15 to 90 minutes. For more information please email us at
+              youthvoicesofgreatercincinnati@gmail.com
+            </p>
+          </Col>
+          <Col className={classes.ImageCol} md="4">
+            <img src={imgSrc} alt="about" />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

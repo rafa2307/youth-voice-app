@@ -1,34 +1,14 @@
 .AboutUs {
   min-height: 88%;
+  max-width: 90% !important;
+  padding-top: 30px;
 }
 .Header {
-  color: #245e7d;
-  padding-left: 2%;
-  padding-top: 2%;
-  margin-bottom: 40px;
+  margin: 3% 0 20px 0;
 }
-
-.Pages {
-  margin: 0 50%;
+.TextCol {
+  text-align: center;
 }
-.PageNumberActive {
-  list-style: none;
-  display: inline;
-  color: #245e7d;
-  cursor: context-menu;
-  font-size: 250%;
-  padding-right: 2%;
-}
-
-.PageNumberNotActive {
-  list-style: none;
-  display: inline;
-  color: grey;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  font-size: 250%;
-  padding-right: 2%;
+.ImageCol img {
+  width: 100%;
 }
