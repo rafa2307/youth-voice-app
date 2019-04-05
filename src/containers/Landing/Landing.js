@@ -193,7 +193,7 @@ export default class Landing extends Component {
             <Route path="/aboutUs" exact component={AboutUs} />
             <div className={classes.Footer}>
               <ul>
-                <li>
+                <li className={classes.SpecialFooter}>
                   <NavLink
                     onClick={this.closeNavbar}
                     className={classes.NavLink}
@@ -203,7 +203,7 @@ export default class Landing extends Component {
                     Home
                   </NavLink>
                 </li>
-                <li>
+                <li className={classes.SpecialFooter}>
                   <NavLink
                     onClick={this.closeNavbar}
                     className={classes.NavLink}

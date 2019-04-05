@@ -13,27 +13,6 @@ const initialState = {
       title: 'Voices Without Borders',
       text:
         'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-    },
-    {
-      src: require('../assets/img/norwood-logo.png'),
-      alt: 'Norwood',
-      title: 'Norwood',
-      text:
-        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-    },
-    {
-      src: require('../assets/img/fuel-logo.png'),
-      alt: 'Fuel',
-      title: 'Fuel',
-      text:
-        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
-    },
-    {
-      src: require('../assets/img/fcm-logo.png'),
-      alt: 'FCM',
-      title: 'FCM',
-      text:
-        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
     }
   ],
   news: [
@@ -58,19 +37,15 @@ const initialState = {
   ],
   supporters: [
     {
-      img: require('../assets/img/Aboutteamsnip.png'),
+      img: require('../assets/img/norwood-logo.png'),
       alt: 'img'
     },
     {
-      img: require('../assets/img/Aboutteamsnip.png'),
+      img: require('../assets/img/fuel-logo.png'),
       alt: 'img'
     },
     {
-      img: require('../assets/img/Aboutteamsnip.png'),
-      alt: 'img'
-    },
-    {
-      img: require('../assets/img/Aboutteamsnip.png'),
+      img: require('../assets/img/fcm-logo.png'),
       alt: 'img'
     }
   ],

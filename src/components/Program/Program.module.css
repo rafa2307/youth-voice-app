@@ -1,3 +1,9 @@
 .Program img {
-  width: 25%;
+  width: 33%;
+}
+@media only screen and (max-width: 450px) {
+  .Program img {
+    width: 90%;
+    margin-bottom: 10px;
+  }
 }

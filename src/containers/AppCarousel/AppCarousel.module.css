@@ -7,8 +7,8 @@
   width: 46%;
   /* height: 12%; */
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 29%;
 }
 
@@ -31,4 +31,13 @@
 }
 .CarouselIndicators li.active {
   background-color: #245e7d !important;
+}
+@media only screen and (max-width: 450px) {
+  .AppCarousel div div img {
+    width: 100%;
+    margin: 0;
+  }
+  .CarouselIndicators {
+    margin-top: 7px;
+  }
 }

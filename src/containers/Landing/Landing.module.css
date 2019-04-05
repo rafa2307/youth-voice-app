@@ -118,11 +118,8 @@
     margin: 0 10px;
   }
 }
-@media only screen and (max-width: 425px) {
-  .Footer ul li a {
-    margin: 0 4px;
-  }
-  .Footer ul li:first-child {
-    margin-left: -6%;
+@media only screen and (max-width: 500px) {
+  .Footer ul li.SpecialFooter a {
+    display: none;
   }
 }

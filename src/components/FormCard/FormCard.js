@@ -4,7 +4,9 @@ import classes from './FormCard.module.css';
 
 const formCard = props => (
   <div className={classes.FormCard}>
-    <span className={classes.CardTitle}>Email:</span> <span>{props.email}</span>
+    <span className={classes.CardTitle}>Email:</span>
+    <br />
+    <span className={classes.Email}>{props.email}</span>
     <br />
     <span className={classes.CardTitle}>Address:</span>{' '}
     <span>{props.address}</span>
