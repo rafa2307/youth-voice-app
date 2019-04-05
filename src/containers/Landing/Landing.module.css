@@ -122,4 +122,7 @@
   .Footer ul li.SpecialFooter a {
     display: none;
   }
+  .Footer ul {
+    margin-left: -5px;
+  }
 }
