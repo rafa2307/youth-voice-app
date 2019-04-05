@@ -27,7 +27,7 @@
   cursor: pointer;
   -webkit-transition: all linear 0.5s !important;
   transition: all linear 0.5s !important;
-  margin: 8% 2px 0 2px;
+  margin: 5% 2px 0 2px;
 }
 .CarouselIndicators li.active {
   background-color: #245e7d !important;
