@@ -42,7 +42,7 @@ class Home extends Component {
     };
     const renderSupporters = supporters.map((supporter, index) => {
       return (
-        <Col key={index} md="3">
+        <Col key={index} md="4">
           <img
             className={classes.Supporter}
             src={supporter.img}
@@ -83,7 +83,7 @@ class Home extends Component {
         </Container>
         <Container className={classes.BottomContainer}>
           <h2>OUR SUPPORTERS AND PARTNERS</h2>
-          <Row>{renderSupporters}</Row>
+          <Row className={classes.Row}>{renderSupporters}</Row>
         </Container>
       </div>
     );
