@@ -9,7 +9,7 @@ class AboutUs extends Component {
     const imgSrc = require('../../assets/img/Dragonfly.jpg');
     return (
       <Container className={classes.AboutUs}>
-        <h2 className={classes.Header}>About Us</h2>
+        <h2 className={classes.Header}>Our Story</h2>
         <Row>
           <Col className={classes.TextCol} md="8">
             <p>

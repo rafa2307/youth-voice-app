@@ -11,7 +11,8 @@
   width: 150px;
 }
 
-.NavLink {
+.NavLink,
+.UncontrolledDropdown {
   font-weight: 600;
   font-size: 12pt;
   -webkit-transition: all 0.1s linear;
@@ -21,7 +22,12 @@
   color: #245e7d !important;
 }
 
-.Item {
+.UncontrolledDropdown a:hover {
+  color: #245e7d !important;
+}
+
+.Item,
+.UncontrolledDropdown {
   border-right: #cfb364 1px solid;
 }
 .SocialItem {

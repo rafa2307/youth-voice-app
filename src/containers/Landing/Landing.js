@@ -11,7 +11,11 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import ScrollToTop from 'react-router-scroll-top';
 import SearchField from 'react-search-field';
@@ -95,31 +99,42 @@ export default class Landing extends Component {
                       to="programs"
                       activeClassName="active"
                     >
-                      Programs
+                      Our Programs
                     </NavLink>
                   </NavItem>
-                  <NavItem className={classes.Item}>
-                    <NavLink
-                      onClick={this.closeNavbar}
-                      className={classes.NavLink}
-                      tag={RRNavLink}
-                      to="adult-participate"
-                      activeClassName="active"
-                    >
-                      Adult Sign Up
-                    </NavLink>
-                  </NavItem>
-                  <NavItem className={classes.Item}>
-                    <NavLink
-                      onClick={this.closeNavbar}
-                      className={classes.NavLink}
-                      tag={RRNavLink}
-                      to="youth-participate"
-                      activeClassName="active"
-                    >
-                      Youth Sign Up
-                    </NavLink>
-                  </NavItem>
+                  <UncontrolledDropdown
+                    className={classes.UncontrolledDropdown}
+                    nav
+                    inNavbar
+                  >
+                    <DropdownToggle nav caret>
+                      Participate
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                      <DropdownItem>
+                        <NavLink
+                          onClick={this.closeNavbar}
+                          className={classes.NavLink}
+                          tag={RRNavLink}
+                          to="adult-participate"
+                          activeClassName="active"
+                        >
+                          Adult Sign Up
+                        </NavLink>
+                      </DropdownItem>
+                      <DropdownItem>
+                        <NavLink
+                          onClick={this.closeNavbar}
+                          className={classes.NavLink}
+                          tag={RRNavLink}
+                          to="youth-participate"
+                          activeClassName="active"
+                        >
+                          Youth Sign Up
+                        </NavLink>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
                   <NavItem className={classes.Item}>
                     <NavLink
                       onClick={this.closeNavbar}
@@ -150,7 +165,7 @@ export default class Landing extends Component {
                       to="aboutUs"
                       activeClassName="active"
                     >
-                      About Us
+                      Our Story
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.SocialItem}>
