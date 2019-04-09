@@ -42,7 +42,7 @@ class Home extends Component {
     };
     const renderSupporters = supporters.map((supporter, index) => {
       return (
-        <Col key={index} md="4">
+        <Col key={index} md="2">
           <img
             className={classes.Supporter}
             src={supporter.img}

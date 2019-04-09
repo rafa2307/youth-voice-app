@@ -5,14 +5,14 @@ const initialState = {
       alt: 'Youth Voices',
       title: 'Youth Voices',
       text:
-        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
+        'Youth Voices of Greater Cincinnati is a program in the community of Cincinnati with an empowering goal to show teenagers the value of their voices. Teens have the ability to host a talk show in which they can star in to interview community members for. The topics can range from a huge variety of topics such as work, bullying, LGBTQ, cancer survivors and deployment. Really, anything you are curious about or want to explore more.'
     },
     {
       src: require('../assets/img/VoicesWithoutBorders.png'),
       alt: 'Voices Without Borders',
       title: 'Voices Without Borders',
       text:
-        'Sunt consectetur ipsum irure in sint minim tempor elit consequat ut esse eu fugiat. Deserunt Lorem labore in veniam qui laboris. Nostrud non ipsum enim consequat ipsum deserunt reprehenderit. Aute ex duis tempor occaecat qui aliqua.'
+        'Voices Without Borders is a parallel program offered to those who wish to do a talk show in languages other than English. It works for youth to enlist talk show guests who speak their language. Everyone is welcome.'
     }
   ],
   news: [
@@ -47,7 +47,10 @@ const initialState = {
     {
       img: require('../assets/img/fcm-logo.png'),
       alt: 'img'
-    }
+    },
+    { img: require('../assets/img/parents2partners.png'), alt: 'img' },
+    { img: require('../assets/img/MHJF.jpg'), alt: 'img' },
+    { img: require('../assets/img/NCT.jpg'), alt: 'img' }
   ],
   stories: [
     {

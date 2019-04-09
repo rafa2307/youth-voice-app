@@ -12,7 +12,6 @@
   height: 100% !important;
   min-height: 100% !important;
 }
-.TeamSnip {
-  height: 215px;
-  width: 245px;
+.Row{
+      margin-bottom: 60px;
 }
