@@ -143,7 +143,7 @@ export default class Landing extends Component {
                       to="stories"
                       activeClassName="active"
                     >
-                      Stories
+                      Episodes
                     </NavLink>
                   </NavItem>
                   <NavItem className={classes.Item}>
