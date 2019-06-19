@@ -59,7 +59,7 @@ class Home extends Component {
           <Col>
             <h1>OUR PROGRAMS</h1>
           </Col>
-          <Row className={classes.ProgramSection}>{renderPrograms()}</Row>
+          <Row className={classes.ProgramSection}>{renderPrograms()} </Row>
         </Container>
         <Container className={classes.BlueContainer}>
           <Row className={classes.VideoSection}>

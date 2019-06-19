@@ -1,11 +1,18 @@
 .Program {
   text-align: center;
-  margin: auto;
+  
 }
+
 .Program img {
   width: 216px !important;
+  height: 120px !important;
+
 }
+
 .Program p {
   padding: 16px;
   margin: 0px 8%;
+  
+
+  
 }

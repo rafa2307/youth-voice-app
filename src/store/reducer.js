@@ -1,7 +1,7 @@
 const initialState = {
   programs: [
     {
-      src: require('../assets/img/YouthVoicesLogo.jpg'),
+      src: require('../assets/img/YouthVoicesLogo.png'),
       alt: 'Youth Voices',
       title: 'Youth Voices',
       text:
@@ -55,37 +55,37 @@ const initialState = {
   stories: [
     {
       header: 'Story 1',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      src: 'https://www.youtube.com/embed/CaODi_0HSIU',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },
     {
       header: 'Story 2',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      src: 'https://www.youtube.com/embed/mqEPruoHsHQ',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },
     {
-      header: 'bob 3',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      header: 'Story 3',
+      src: 'https://www.youtube.com/embed/HRLQN-Lfdfs',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },
     {
       header: 'Story 4',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      src: 'https://www.youtube.com/embed/mo-cOfDOT5s',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },
     {
       header: 'Story 5',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      src: 'https://www.youtube.com/embed/_-Uu8UcN0Zw',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },
     {
       header: 'Story 6',
-      src: 'https://www.youtube.com/channel/UCZLV4ZUg89Sgz7Zxm_p7PRA',
+      src: 'https://www.youtube.com/embed/_-Uu8UcN0Zw',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing joe. Pellentesque egestas, turpis a feugiat dictum'
     },

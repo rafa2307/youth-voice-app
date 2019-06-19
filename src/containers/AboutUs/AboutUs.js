@@ -6,7 +6,7 @@ import classes from './AboutUs.module.css';
 
 class AboutUs extends Component {
   render() {
-    const imgSrc = require('../../assets/img/Dragonfly.jpg');
+    const imgSrc = require('../../assets/img/Fuel The Fire_93.jpg');
     return (
       <Container className={classes.AboutUs}>
         <h2 className={classes.Header}>Our Story</h2>
